@@ -14,7 +14,7 @@ def flush_cache(sender, **kwargs):
     cache.clear()
 
 
-class ZerverConfig(AppConfig):
+cla ss ZerverConfig(AppConfig):
     name = "zerver"  # type: str
 
     def ready(self):
