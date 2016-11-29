@@ -718,6 +718,9 @@ def log_message(message):
 # Helper function. Defaults here are overriden by those set in do_send_messages
 def do_send_message(message, rendered_content = None, no_log = False, stream = None, local_id = None):
     # type: (Union[int, Message], Optional[text_type], bool, Optional[Stream], Optional[int]) -> int
+    if message == "Nanananana":
+        message = "Nanananana Batman!"
+
     return do_send_messages([{'message': message,
                               'rendered_content': rendered_content,
                               'no_log': no_log,
@@ -1254,9 +1257,6 @@ def check_message(sender, client, message_type_name, message_to,
             raise JsonableError(e.messages[0])
     else:
         raise JsonableError(_("Invalid message type"))
-    print(message_content)
-    if message_content == "Nanananana":
-        message_content = "Nanananana Batman!"
 
     message = Message()
     message.sender = sender
