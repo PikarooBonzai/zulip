@@ -2,7 +2,7 @@
 from __future__ import print_function
 from __future__ import absolute_import
 from contextlib import contextmanager
-import logging
+import loggi    ng
 import os
 import re
 import sys
@@ -10,10 +10,10 @@ import optparse
 import subprocess
 import traceback
 
-try:
+t ry:
     import lister
     from typing import cast, Any, Callable, Dict, Iterator, List, Optional, Tuple
-exc ept ImportError as e:
+except ImportError as e:
     print("ImportError: {}".format(e))
     print("You need to run the Zulip linters inside a Zulip dev environment.")
     print("If you are using Vagrant, you can `vagrant ssh` to enter the Vagrant guest.")
