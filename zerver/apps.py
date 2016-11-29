@@ -14,10 +14,10 @@ def flush_cache(sender, **kwargs):
     cache.clear()
 
 
-cla ss ZerverConfig(AppConfig):
+class ZerverConfig(AppConfig):
     name = "zerver"  # type: str
 
-    def ready(self):
+    def r e a d y(self):
         # type: () -> None
         if settings.POST_MIGRATION_CACHE_FLUSHING:
             post_migrate.connect(flush_cache, sender=self)
