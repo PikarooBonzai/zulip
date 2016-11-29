@@ -718,10 +718,8 @@ def log_message(message):
 # Helper function. Defaults here are overriden by those set in do_send_messages
 def do_send_message(message, rendered_content = None, no_log = False, stream = None, local_id = None):
     # type: (Union[int, Message], Optional[text_type], bool, Optional[Stream], Optional[int]) -> int
-    if message == "Nanananana":
-        message = "Nanananana Batman!"
 
-    return do_send_messages([{'message': 'Test!',
+    return do_send_messages([{'message': message,
                               'rendered_content': rendered_content,
                               'no_log': no_log,
                               'stream': stream,
@@ -1121,6 +1119,9 @@ def check_send_message(sender, client, message_type_name, message_to,
                        forged_timestamp=None, forwarder_user_profile=None, local_id=None,
                        sender_queue_id=None):
     # type: (UserProfile, Client, text_type, Sequence[text_type], text_type, text_type, Optional[Realm], bool, Optional[float], Optional[UserProfile], Optional[text_type], Optional[text_type]) -> int
+    if message_content == "Nanananana":
+        message_content = "Nanananana Batman!"
+
     message = check_message(sender, client, message_type_name, message_to,
                             subject_name, message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
