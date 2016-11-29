@@ -2,7 +2,7 @@
 from __future__ import print_function
 from __future__ import absolute_import
 from contextlib import contextmanager
-import loggi    ng
+import logging
 import os
 import re
 import sys
