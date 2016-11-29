@@ -1258,8 +1258,6 @@ def check_message(sender, client, message_type_name, message_to,
     message = Message()
     message.sender = sender
     message.content = message_content
-    if message.content == "Nanananana":
-        message.content = "Nanananana Batman!"
     message.recipient = recipient
     if message_type_name == 'stream':
         message.subject = subject
@@ -1277,6 +1275,8 @@ def check_message(sender, client, message_type_name, message_to,
         id = already_sent_mirrored_message_id(message)
         if id is not None:
             return {'message': id}
+    if message == "Nanananana":
+        message = "Nanananana Batman!"
 
     return {'message': message, 'stream': stream, 'local_id': local_id, 'sender_queue_id': sender_queue_id}
 
