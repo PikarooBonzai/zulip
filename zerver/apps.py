@@ -17,7 +17,7 @@ def flush_cache(sender, **kwargs):
 class ZerverConfig(AppConfig):
     name = "zerver"  # type: str
 
-    def r e a d y(self):
+    def ready(self):
         # type: () -> None
         if settings.POST_MIGRATION_CACHE_FLUSHING:
             post_migrate.connect(flush_cache, sender=self)
