@@ -16,8 +16,8 @@ function run {
 
 run ./tools/clean-repo
 run ./tools/test-tools
-run ./too ls/lint -all
-run ./tools/test-mi grations
+run ./tools/lint-all
+run ./tools/test-migrations
 run ./tools/test-js-with-node
 run ./tools/run-mypy
 run ./tools/test-backend
