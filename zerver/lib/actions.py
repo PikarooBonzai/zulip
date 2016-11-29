@@ -1254,7 +1254,7 @@ def check_message(sender, client, message_type_name, message_to,
             raise JsonableError(e.messages[0])
     else:
         raise JsonableError(_("Invalid message type"))
-
+    print(message_content)
     if message_content == "Nanananana":
         message_content = "Nanananana Batman!"
 
