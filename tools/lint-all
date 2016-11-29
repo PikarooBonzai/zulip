@@ -10,7 +10,7 @@ import optparse
 import subprocess
 import traceback
 
-t ry:
+try:
     import lister
     from typing import cast, Any, Callable, Dict, Iterator, List, Optional, Tuple
 except ImportError as e:
