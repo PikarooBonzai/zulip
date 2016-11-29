@@ -1121,10 +1121,8 @@ def check_send_message(sender, client, message_type_name, message_to,
     message = check_message(sender, client, message_type_name, message_to,
                             subject_name, message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
-    if check_message[5] == "Nanananana":
-        return "Nanananana Batman!"
-    else:
-        return do_send_messages([message])[0]
+
+    return do_send_messages([message])[0]
 
 def check_stream_name(stream_name):
     # type: (text_type) -> None
@@ -1260,6 +1258,8 @@ def check_message(sender, client, message_type_name, message_to,
     message = Message()
     message.sender = sender
     message.content = message_content
+    if message.content == "Nanananana":
+        message.content = "Nanananana Batman!"
     message.recipient = recipient
     if message_type_name == 'stream':
         message.subject = subject
