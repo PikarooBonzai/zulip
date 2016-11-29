@@ -721,7 +721,7 @@ def do_send_message(message, rendered_content = None, no_log = False, stream = N
     if message == "Nanananana":
         message = "Nanananana Batman!"
 
-    return do_send_messages([{'message': message,
+    return do_send_messages([{'message': 'Test!',
                               'rendered_content': rendered_content,
                               'no_log': no_log,
                               'stream': stream,
