@@ -13,7 +13,7 @@ import traceback
 try:
     import lister
     from typing import cast, Any, Callable, Dict, Iterator, List, Optional, Tuple
-except ImportError as e:
+exc ept ImportError as e:
     print("ImportError: {}".format(e))
     print("You need to run the Zulip linters inside a Zulip dev environment.")
     print("If you are using Vagrant, you can `vagrant ssh` to enter the Vagrant guest.")
