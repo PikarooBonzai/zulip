@@ -140,7 +140,7 @@ WEBHOOK_INTEGRATIONS = [
         display_name='Yo App'
     ),
     WebhookIntegration('zendesk'),
-    WebhookIntegration('testvanbotten', display_name='testvanbotten')
+    WebhookIntegration('testvanbotten', display_name='Test Van Botten')
 ]  # type: List[WebhookIntegration]
 
 INTEGRATIONS = {
